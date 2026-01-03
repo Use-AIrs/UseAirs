@@ -1,0 +1,56 @@
+{
+  "name": "first_model",
+  "version": "0.11_pre_alpha",
+  "data": {
+    "source": {
+      "type": "csv",
+      "path": "../../test.csv"
+    },
+    "scheme": {
+      "columns": [
+          "id",
+          "age",
+          "salary",
+          "department",
+          "city",
+          "score",
+          "status"
+      ]
+    },
+  "transformer": [
+    {
+      "t_id": 0,
+      "operation": "categories",
+      "params": {
+        "columns": [
+          "department",
+          "status"
+        ]
+      }
+    }
+  ]
+  },
+  "models": [
+    {
+      "id": 0,
+      "model_type": "GradientBoostedDecisionTree",
+      "input_columns": [
+        "header1",
+        "header2",
+        "header3"
+      ],
+      "target_columns": [
+        "label"
+      ],
+      "hyperparams": {
+        "n_trees": 100,
+        "learning_rate": 0.9,
+        "max_depth": 5
+      },
+      "mode": "Train"
+    }
+  ],
+  "output": {
+    "final_output": ["m0"]
+  }
+}

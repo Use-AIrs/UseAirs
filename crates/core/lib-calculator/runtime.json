@@ -1,0 +1,4 @@
+{
+  "fns": [
+    "tensorref_from_vec::<R>", "age", "salary", "department", "city", "score", "status"]
+}

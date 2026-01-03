@@ -1,0 +1,10 @@
+[package]
+name = "use-ai"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lib-store = { path = "../core/lib-store" }
+lib-stage = { path = "../core/lib-stage" }
+inquire = "0.7.5"
+thiserror = "2.0.11"

@@ -1,0 +1,50 @@
+# SPDX-License-Identifier: LicenseRef-PolyForm-Perimeter-1.0.1
+# Copyright (c) 2026 Use-AI.rs
+#
+# This file is part of Use-Ai.rs
+# See LICENSE for details
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+rust-version = "1.85"
+
+[workspace]
+resolver = "2"
+members = ["crates/core/*", "crates/examples/*", "crates/use-ai"]
+
+[workspace.dependencies]
+cubecl-core = { path = "../cube1/crates/cubecl-core", version = "0.9.0", features = [
+] }
+cubecl-common = { path = "../cube1/crates/cubecl-common", version = "0.9.0", features = [
+
+] }
+cubecl-runtime = { path = "../cube1/crates/cubecl-runtime", version = "0.9.0", features = [
+
+] }
+cubecl-reduce = { path = "../cube1/crates/cubecl-reduce", version = "0.9.0", features = [
+
+] }
+cubecl-cuda = { path = "../cube1/crates/cubecl-cuda", version = "0.9.0", features = [
+
+] }
+cubecl-macros = { path = "../cube1/crates/cubecl-macros", version = "0.9.0", features = [
+
+] }
+cubecl-std = { path = "../cube1/crates/cubecl-std", version = "0.9.0", features = [
+
+] }
+cubecl = { path = "../cube1/crates/cubecl", version = "0.9.0", features = [] }
+cudarc = { version = "0.18.2", features = [
+  "std",
+  "driver",
+  "nvrtc",
+  "dynamic-loading",
+  "cuda-version-from-build-system",
+  "fallback-latest",
+  "nccl",
+] }
+
+
+[profile.release]
+debug = true

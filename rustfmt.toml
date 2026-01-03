@@ -1,0 +1,6 @@
+edition = "2024"
+fn_params_layout = "Vertical"
+hard_tabs = true
+match_block_trailing_comma = true
+single_line_let_else_max_width = 0
+fn_call_width = 42

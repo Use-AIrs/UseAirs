@@ -1,0 +1,5 @@
+[profiling]
+logger = { level = "full", file = "cubecl_profile.log", stdout = false }
+
+[compilation]
+logger = { level = "basic", file = "cubecl_comp.log", append = true }

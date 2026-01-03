@@ -1,0 +1,13 @@
+[package]
+name = "lib-store"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+thiserror = "2.0.11"
+serde = "1.0.217"
+serde_json = "1.0.135"
+
+[dependencies.mongodb]
+version = "3.1.1"
+features = ["sync"]

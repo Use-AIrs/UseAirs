@@ -1,0 +1,26 @@
+[package]
+name = "operation-examples"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lib-calculator = { path = "../../core/lib-calculator" }
+cubecl = { workspace = true }
+cubecl-cuda = { workspace = true }
+cubecl-core = { workspace = true }
+cubecl-common = { workspace = true }
+chrono = "0.4"
+bytemuck = "1.14"
+
+[[bin]]
+name = "sorting_bench"
+path = "src/sorting_bench.rs"
+
+[[bin]]
+name = "nccl_bench"
+path = "src/main.rs"
+required-features = ["nccl"]
+
+[features]
+default = []
+nccl = ["lib-calculator/nccl"]
